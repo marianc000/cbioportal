@@ -31,7 +31,20 @@
 <%@ page import="org.codehaus.jackson.JsonParser" %>
 <%@ page import="org.codehaus.jackson.JsonFactory" %>
 <%@ page import="org.codehaus.jackson.map.ObjectMapper" %>
-
+<%@ page import="java.util.Map" %>
+<%@ page import="org.codehaus.jackson.map.ObjectMapper" %>
+<%!
+    public int countProfiles (ArrayList<GeneticProfile> profileList, GeneticAlterationType type) {
+        int counter = 0;
+        for (int i = 0; i < profileList.size(); i++) {
+            GeneticProfile profile = profileList.get(i);
+            if (profile.getGeneticAlterationType() == type) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+%>
 <%
     //Security Instance
     ServletXssUtil xssUtil = ServletXssUtil.getInstance();
@@ -244,24 +257,9 @@ $(document).ready(function() {
 
 
 </script>
-
-
-<%!
-    public int countProfiles (ArrayList<GeneticProfile> profileList, GeneticAlterationType type) {
-        int counter = 0;
-        for (int i = 0; i < profileList.size(); i++) {
-            GeneticProfile profile = profileList.get(i);
-            if (profile.getGeneticAlterationType() == type) {
-                counter++;
-            }
-        }
-        return counter;
-    }
-%>
-
+ 
 <jsp:include page="global/header.jsp" flush="true" />
-<%@ page import="java.util.Map" %>
-<%@ page import="org.codehaus.jackson.map.ObjectMapper" %>
+
 
 <%
     // we have session service running AND this was a post, 
