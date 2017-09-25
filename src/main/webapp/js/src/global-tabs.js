@@ -50,7 +50,7 @@ $(document).ready(function() {
 window.loadReactApp = function(config) {
 
     // Set frontend route to /patient
-    window.defaultRoute = `/${config.defaultRoute}`;
+    window.defaultRoute = '/patient';
 
 
     if (localStorage.getItem('localdev') === "true") {

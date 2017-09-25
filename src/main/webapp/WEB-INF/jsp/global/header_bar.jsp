@@ -11,7 +11,7 @@
  - consequential damages, including lost profits, arising out of the use of this
  - software and its documentation, even if Memorial Sloan-Kettering Cancer
  - Center has been advised of the possibility of such damage.
- --%>
+--%>
 
 <%--
  - This file is part of cBioPortal.
@@ -34,20 +34,21 @@
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%
-    String principal = "";
+    String principal = GlobalProperties.getAuthenticatedUserName();
     String samlLogoutURL = "/saml/logout?local=" + GlobalProperties.getSamlIsLogoutLocal();
     String authenticationMethod = GlobalProperties.authenticationMethod();
-    if (authenticationMethod.equals("openid") || authenticationMethod.equals("ldap")) {
-        principal = "principal.name";
-    }
-    else if (authenticationMethod.equals("googleplus") || authenticationMethod.equals("saml") || authenticationMethod.equals("ad")) {
-        principal = "principal.username";
-    }
+//    if (authenticationMethod.equals("openid") || authenticationMethod.equals("ldap")) {
+//        principal = "principal.name";
+//    }
+//    else if (authenticationMethod.equals("googleplus") || authenticationMethod.equals("saml") || authenticationMethod.equals("ad")) {
+//        principal = "principal.username";
+//    }
 
     // retrieve right-logo from global properties. Based on the tagLineImage code.
     String rightLogo = (authenticationMethod.equals("saml")) ?
             "/" + GlobalProperties.getRightLogo() : GlobalProperties.getRightLogo();
     pageContext.setAttribute("rightLogo", rightLogo);
+    
 %>
 
 <header>
@@ -57,18 +58,16 @@
             <!-- Display Sign Out Button for Real (Non-Anonymous) User -->
             <sec:authorize access="!hasRole('ROLE_ANONYMOUS')">
                 <p>
-                    <span>You are logged in as <span class="username"><sec:authentication property='<%=principal%>' /></span> | 
-                    <% if (authenticationMethod.equals("saml")) { %>
-                        <a href="<c:url value="/saml/logout?local=true"/>">Sign out</a>
-                    <%} else { %>
+                    <span>You are logged in as <span class="username"> <%=principal%> </span> | 
+
                         <a href="j_spring_security_logout">Sign out</a>
-                    <% } %>
+
                     </span>
                 </p>
             </sec:authorize>
 
             <% if (rightLogo != "") { %>
-                <img id="institute-logo" src="<c:url value="${rightLogo}"/>" alt="Institute Logo" />
+            <img id="institute-logo" src="<c:url value="${rightLogo}"/>" alt="Institute Logo" />
             <% } %>
         </div>
 
@@ -135,10 +134,10 @@
                     // This way, the user will still get feedback for the other customPages
                     int until=customPagesArray.length - customPagesArray.length%2;
                     for(int i=0; i<until; i=i+2){ %>
-                        <li class="internal">
-                            <a href="<%=customPagesArray[i].trim()%>"><%=customPagesArray[i+1].trim()%></a>
-                        </li>
-                    <%}
+                <li class="internal">
+                    <a href="<%=customPagesArray[i].trim()%>"><%=customPagesArray[i+1].trim()%></a>
+                </li>
+                <%}
                 }%>
 
                 <!-- Added call GlobalProperties to check whether to show the Visualize tab -->

@@ -1,7 +1,7 @@
 /* CSS THAT APPLIES TO ALLLLLL PORTALS */
 
 body {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     table-layout: fixed;
     text-align: center;
@@ -61,12 +61,12 @@ td, th {
 */
 
 #page_wrapper {
-  background-color: #fff;
-  margin: 0 auto;
-  min-width: 780px;
-  max-width: 1320px !important;
-  text-align: left;
-  padding: 0px;
+    background-color: #fff;
+    margin: 0 auto;
+    min-width: 780px;
+    /*max-width: 1320px !important;*/
+    text-align: left;
+    padding: 0px;
 }
 
 fieldset#clinical-timeline-fieldset, fieldset#patient-view-summary-fieldset {
@@ -103,14 +103,14 @@ fieldset#patient-view-summary-fieldset > legend {
 }
 
 #header_site_name{
-  font-size:24px;
-  font-weight:bold;
-  color:#1974b8;
+    font-size:24px;
+    font-weight:bold;
+    color:#1974b8;
 }
 
 #page_wrapper_table {
-  border-collapse: collapse;
-  border-spacing: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
 }
 
 @media (max-width: 1299px) {
@@ -125,28 +125,28 @@ fieldset#patient-view-summary-fieldset > legend {
 }
 
 img {
-  border: 0px;
+    border: 0px;
 }
 
 A:link {
-  COLOR: #0000FF; text-decoration: none;
+    COLOR: #0000FF; text-decoration: none;
 }
 A:visited {
-  COLOR: #0000FF; text-decoration: none;
+    COLOR: #0000FF; text-decoration: none;
 }
 A:active {
-  COLOR: #0000FF; text-decoration: none;
+    COLOR: #0000FF; text-decoration: none;
 }
 A:hover {
-  COLOR: #FF0000; text-decoration: underline;
+    COLOR: #FF0000; text-decoration: underline;
 }
 
 #instructions {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  background: #FFFFFF;
-  border: 8px solid #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background: #FFFFFF;
+    border: 8px solid #FFFFFF;
 }
 
 #main_submit {
@@ -200,47 +200,47 @@ A:hover {
 
 #network {
     height: 750px;
-  /* never allow setting display to none
-     this is to fix flash (CytoWeb) repaint problem */
-  /*display: block !important;*/
+    /* never allow setting display to none
+       this is to fix flash (CytoWeb) repaint problem */
+    /*display: block !important;*/
 }
 
 .map table {
-  border: 1px solid #03476F;
-  color: #363636;
-  background: #CCCCFF;
+    border: 1px solid #03476F;
+    color: #363636;
+    background: #CCCCFF;
 }
 
 .map caption {
-  text-align: center;
-  font: bold 18px arial, helvetica, sans-serif;
-  background: transparent;
-  padding:6px 4px 8px 0px;
-  color: #03476F;
-  text-transform: uppercase;
+    text-align: center;
+    font: bold 18px arial, helvetica, sans-serif;
+    background: transparent;
+    padding:6px 4px 8px 0px;
+    color: #03476F;
+    text-transform: uppercase;
 }
 
 .map th {
-  padding: .4em;
-  color: #363636;
-  border-bottom: 1px solid #AEAEFF;
-  vertical-align: top;
-  text-align: left;
-  font-size:12px;
+    padding: .4em;
+    color: #363636;
+    border-bottom: 1px solid #AEAEFF;
+    vertical-align: top;
+    text-align: left;
+    font-size:12px;
 }
 
 .map thead td{
-  color: #000;
-  font-weight: bold !important;
-  border-bottom: 1px solid #AEAEFF;
+    color: #000;
+    font-weight: bold !important;
+    border-bottom: 1px solid #AEAEFF;
 }
 
 .map td {
-  padding: .4em;
-  color: #363636;
-  vertical-align: top;
-  text-align: left;
-  font-size:100%;
+    padding: .4em;
+    color: #363636;
+    vertical-align: top;
+    text-align: left;
+    font-size:100%;
 }
 
 .map .amp_1 {
@@ -307,11 +307,11 @@ A:hover {
 }
 
 .main_smry table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 #main_smry_modify_query_btn button {
-  margin-left: 0px;
+    margin-left: 0px;
 }
 
 .warning h4{
@@ -337,36 +337,36 @@ A:hover {
 }
 
 .tab_active {
-   background: #DDDDDD;
-   border: 2px solid #DDDDDD;
-   color:#444444;
+    background: #DDDDDD;
+    border: 2px solid #DDDDDD;
+    color:#444444;
 }
 
 .tab_inactive{
-   background: #FFFFFF;
-   border: 2px solid #DDDDDD;
+    background: #FFFFFF;
+    border: 2px solid #DDDDDD;
 }
 
 h1 {
-  /* margin:0px; */
-  font-family: verdana, arial, sans-serif;
-  font-size: 28px;
-  color:gray;
-  letter-spacing: -1px;
-  text-align: left;
-  padding-bottom:7px;
+    /* margin:0px; */
+    font-family: verdana, arial, sans-serif;
+    font-size: 28px;
+    color:gray;
+    letter-spacing: -1px;
+    text-align: left;
+    padding-bottom:7px;
 }
 
 .map h5 {
-  margin-left:2px;
-  margin-top:4px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 13px !important;
-  color:black;
-  letter-spacing: -1px;
-  text-align: left;
-  padding-bottom:9px;
-  font-weight:bold !important;
+    margin-left:2px;
+    margin-top:4px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 13px !important;
+    color:black;
+    letter-spacing: -1px;
+    text-align: left;
+    padding-bottom:9px;
+    font-weight:bold !important;
 }
 
 #caseList {
@@ -374,24 +374,24 @@ h1 {
 }
 
 table td {
-  font-size:12px;
+    font-size:12px;
 }
 
 .somatic {
-  background: #CCFFFF;
-  color:black;
-  padding-left:5px;
-  padding-right:5px;
-  font-weight:bold;
+    background: #CCFFFF;
+    color:black;
+    padding-left:5px;
+    padding-right:5px;
+    font-weight:bold;
 }
 
 .germline {
-  background: #FFFFCC;
-  color:black;
-  padding:1px;
-  padding-left:3px;
-  padding-right:3px;
-  font-weight:bold;
+    background: #FFFFCC;
+    color:black;
+    padding:1px;
+    padding-left:3px;
+    padding-right:3px;
+    font-weight:bold;
 }
 
 .valid {
@@ -412,62 +412,62 @@ table td {
 }
 
 .markdown h1 {
-  font-family: verdana, arial, sans-serif;
-  font-size: 16px;
-  color:#555555;
-  background: #DDDDDD;
-  padding-left:5px;
-  padding-top:4px;
-  margin:0px;
-  padding-bottom:5px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 16px;
+    color:#555555;
+    background: #DDDDDD;
+    padding-left:5px;
+    padding-top:4px;
+    margin:0px;
+    padding-bottom:5px;
 }
 
 .markdown h2 {
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  color:#555555;
-  background: #EEEEEE;
-  padding-left:5px;
-  padding-top:4px;
-  padding-bottom:4px;
-  margin:0px;
-  margin-top:5px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    color:#555555;
+    background: #EEEEEE;
+    padding-left:5px;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin:0px;
+    margin-top:5px;
 }
 
 .markdown h3 {
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px !important;
-  padding-left:5px;
-  margin:0px;
-  margin-top:5px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px !important;
+    padding-left:5px;
+    margin:0px;
+    margin-top:5px;
 }
 
 .markdown h4 {
-  font-family: verdana, arial, sans-serif;
-  font-size: 14px !important;
-  padding-left:5px;
-  margin:0px;
-  margin-top:5px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px !important;
+    padding-left:5px;
+    margin:0px;
+    margin-top:5px;
 }
 
 .markdown p {
-  padding-left:5px;
-  font-size:14px !important;
-  text-align:left !important;
+    padding-left:5px;
+    font-size:14px !important;
+    text-align:left !important;
 }
 
 .markdown li {
-  padding-left:5px;
-  font-size:14px !important;
+    padding-left:5px;
+    font-size:14px !important;
 }
 
 .markdown code {
-  background:  #FFFFCC;
-  font-size:14px;
-  padding-bottom: 5px;
-  border :1px;
-  /*padding: 10px 10px 10px 20px;*/
-  color:black;
+    background:  #FFFFCC;
+    font-size:14px;
+    padding-bottom: 5px;
+    border :1px;
+    /*padding: 10px 10px 10px 20px;*/
+    color:black;
 }
 
 pre code{
@@ -481,14 +481,14 @@ pre code{
 }
 
 .oncoprint_accordion_panel h1 {
-  margin-top:0px;margin-bottom:0px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 12px;
-  letter-spacing: -1px;
-  color: #2153AA;
-  text-align:justify;
+    margin-top:0px;margin-bottom:0px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 12px;
+    letter-spacing: -1px;
+    color: #2153AA;
+    text-align:justify;
     cursor: default;
 }
 
@@ -503,7 +503,7 @@ pre code{
 }
 
 .oncoprint_accordion_panel table {
-  padding-left:15px;
+    padding-left:15px;
 }
 
 .oncoprint_accordion_panel td {
@@ -542,9 +542,9 @@ pre code{
 }
 
 .oncoprint_indicator {
-  font-size: 10px;
+    font-size: 10px;
     color: #FF0000;
-  display: none;
+    display: none;
     padding-left:25px;
 }
 
@@ -714,11 +714,11 @@ td.op_data_cell{
 
 #genomic_profiles .checkbox,
 #genomic_profiles .radio {
-   margin-left: 40px;
+    margin-left: 40px;
 }
 
 #mRNAcheckbox input {
-   margin-left: 40px;
+    margin-left: 40px;
 }
 
 
@@ -755,116 +755,116 @@ td.op_data_cell{
 #tabs li a { outline: none }
 
 .markdown table {
-  border: 1px solid #03476F;
-  font: normal 11px verdana, arial, helvetica, sans-serif;
-  color: #363636;
+    border: 1px solid #03476F;
+    font: normal 11px verdana, arial, helvetica, sans-serif;
+    color: #363636;
 }
 
 .markdown td, th {
-  border:none;
-  padding: .2em;
-  color: #363636;
-  vertical-align: top;
-  text_align: left;
+    border:none;
+    padding: .2em;
+    color: #363636;
+    vertical-align: top;
+    text_align: left;
 }
 
 .markdown td {
-  font-size:93%;
+    font-size:93%;
 }
 
 .markdown th {
-  font-size:97%;
+    font-size:97%;
 }
 
 #left_side p, #right_side p {
-  margin:10px;margin-top:15px;margin-bottom:15px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  color:black;
+    margin:10px;margin-top:15px;margin-bottom:15px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color:black;
 }
 
 #right_side p {
-  margin: 15px 0;
+    margin: 15px 0;
 }
 
 #right_side table {
-  margin:10px;
+    margin:10px;
 }
 
 #right_side td {
-  font-size:125%;
+    font-size:125%;
 }
 
 #left_side, #right_side li {
-  margin-left:0px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  color:black;
+    margin-left:0px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color:black;
 }
 
 #content A:link {
-        COLOR: #1974b8; text-decoration: none; !important;
+    COLOR: #1974b8; text-decoration: none; !important;
 }
 #content A:visited {
-  COLOR: #1974b8; text-decoration: none; !important;
+    COLOR: #1974b8; text-decoration: none; !important;
 }
 #content A:active {
-  COLOR: #1974b8; text-decoration: none; !important;
+    COLOR: #1974b8; text-decoration: none; !important;
 }
 #content A:hover {
-  COLOR: #1974b8; text-decoration: none; !important;
+    COLOR: #1974b8; text-decoration: none; !important;
 }
 
 .tip {
-  color: white;
-  width: 250px;
+    color: white;
+    width: 250px;
     background:black;
-  z-index: 13000;
+    z-index: 13000;
 }
 
 .tip-title {
-  font-size: 12px;
+    font-size: 12px;
     font-weight:bold;
-  margin: 0;
-  color: white;
-  padding: 8px 8px 4px;
-        text-align:left;
+    margin: 0;
+    color: white;
+    padding: 8px 8px 4px;
+    text-align:left;
 }
 
 .tip-text {
-  font-size: 11px;
-  padding: 4px 8px 8px;
+    font-size: 11px;
+    padding: 4px 8px 8px;
 }
 
 #optional_args {
-  margin:5px;
-  padding:3px;
-  font-size:12px;
+    margin:5px;
+    padding:3px;
+    font-size:12px;
 }
 
 #step5 .step_header{
-  cursor:pointer;
+    cursor:pointer;
 }
 
 .tiny {
-  font-size:12px;
+    font-size:12px;
 }
 
 #load {
-  border: 1px solid #aaaaaa;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  display: none;
-  position: relative;
-  background: url(../images/ajax-loader.gif);
-  background-repeat: no-repeat;
-  background-position:center;
-  width: 100%;
-  height: 500px;
-  margin-top: 5px;
+    border: 1px solid #aaaaaa;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
+    position: relative;
+    background: url(../images/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position:center;
+    width: 100%;
+    height: 500px;
+    margin-top: 5px;
 }
 
 #plots {
@@ -896,363 +896,364 @@ html { min-height: 100%; margin-bottom: 1px; min-width: 100%; margin-right: 1px;
 
 
 #content p {
-  margin: 0 0 15px 0;
-  padding: 0;
-  font-family: verdana, arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #333333;
-  text-align: justify;
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+    text-align: justify;
 }
 
 #content ul {
-  margin-top:5px; margin-bottom: 5px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  line-height: 18px;
-  color: #333333;
-  text-align: justify;
-  list-style-type:disc;
+    margin-top:5px; margin-bottom: 5px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+    text-align: justify;
+    list-style-type:disc;
 }
 
 #content ol {
-  margin-top:15px; margin-bottom: 15px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  line-height: 18px;
-  color: #333333;
-  text-align: justify;
+    margin-top:15px; margin-bottom: 15px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+    text-align: justify;
 }
 
 
 #content h3 {
-  margin-top:5px; margin-bottom: 10px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 18px;
-  color: #2153AA;
+    margin-top:5px; margin-bottom: 10px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 18px;
+    color: #2153AA;
 }
 
 #content h4 {
-  margin-top:0px;margin-bottom:0px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 12px;
-  letter-spacing: -1px;
-  color: #2153AA;
-  text-align:justify;
+    margin-top:0px;margin-bottom:0px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 12px;
+    letter-spacing: -1px;
+    color: #2153AA;
+    text-align:justify;
 }
 
 #content h5 {
-  margin-top:0px;margin-bottom:0px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 12px;
-  color: #000000;
-  text-align:left;
+    margin-top:0px;margin-bottom:0px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    color: #000000;
+    text-align:left;
 }
 
 .rowcolor { background: #DDDDDD; }
 
 
 #content h4 A:link {
-  COLOR: #2153AA; text-decoration: underline;
+    COLOR: #2153AA; text-decoration: underline;
 }
 #content h4 A:visited {
-  COLOR: #2153AA; text-decoration: underline;
+    COLOR: #2153AA; text-decoration: underline;
 }
 #content h4 A:active {
-  COLOR: #2153AA; text-decoration: underline;
+    COLOR: #2153AA; text-decoration: underline;
 }
 #content h4 A:hover {
-  COLOR: #2153AA; text-decoration: underline;
+    COLOR: #2153AA; text-decoration: underline;
 }
 
 .float_left {
-  float: left;
-  margin-right: 10px;
+    float: left;
+    margin-right: 10px;
 }
 
 .float_right {
-  float: right;
-  margin-left: 10px;
+    float: right;
+    margin-left: 10px;
 }
 
 .featurebox_center {
-  background-color: #dff1ff;
-  margin:0px;
-  padding:10px;
-  border: 1px solid #DFE8F7;
-  font-family: verdana, arial, sans-serif;
-  font-size: 11px;
-  line-height: 20px;
-  color: #333333;
-  vertical-align: center;
+    background-color: #dff1ff;
+    margin:0px;
+    padding:10px;
+    border: 1px solid #DFE8F7;
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    line-height: 20px;
+    color: #333333;
+    vertical-align: center;
 }
 
 .featurebox_side {
-  background-color: #fffff6;
-  margin:0px;margin-left:10px;margin-right:10px;margin-bottom:15px;
-  padding:10px;
-  border: 1px solid #DFE8F7;
-  font-family: verdana, arial, sans-serif;
-  font-size: 11px;
-  line-height: 18px;
-  color: #333333;
+    background-color: #fffff6;
+    margin:0px;margin-left:10px;margin-right:10px;margin-bottom:15px;
+    padding:10px;
+    border: 1px solid #DFE8F7;
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    color: #333333;
 }
 
 .center {
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  color: #333333;
-  text-align: center;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
 }
 
 .left {
-  font-family: verdana, arial, sans-serif;
-  font-size: 12px;
-  color: #333333;
-  text-align: left;
+    font-family: verdana, arial, sans-serif;
+    font-size: 12px;
+    color: #333333;
+    text-align: left;
 }
 
 
 .center_small {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 9px;
-  color: #333333;
-  text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    color: #333333;
+    text-align: center;
 }
 
 .align_right{
-   text-align: right;
+    text-align: right;
 }
 
 #login_header_top {
-  padding:5px 0px 0px 0px;
-  background: white;
-  margin:0px;
-  height:70px;
+    padding:5px 0px 0px 0px;
+    background: white;
+    margin:0px;
+    height:70px;
 }
 
 header {
-  background: linear-gradient(to bottom,  rgba(252,252,252,1) 90%, rgba(249,249,249,1) 100%);
-  border-bottom: 1px solid #f5f5f5;
-  margin: 0 0 20px 0;
-  position: relative;
-  display: flex !important;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-end;
+    background: linear-gradient(to bottom,  rgba(252,252,252,1) 90%, rgba(249,249,249,1) 100%);
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0 0 20px 0;
+    position: relative;
+    display: flex !important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 
 #header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 #cbioportal-logo {
-  padding: 15px;
+    padding: 15px;
 }
 
 #institute-logo {
-  box-sizing: content-box;
-  max-height: 35px;
-  padding: 4px 10px;
-  float: right;
+    box-sizing: content-box;
+    max-height: 35px;
+    padding: 4px 10px;
+    float: right;
 }
 
 #authentication {
-  position: relative;
-  margin-top: -2px;
+    position: relative;
+    margin-top: -2px;
 }
 
 #authentication p {
-  font: normal normal 400 11px/35px 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
-  display: inline-block;
-  padding: 0px 10px;
-  float: right;
-  margin: -1px 20px 0px 0;
-  background: #fff;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0px 1px 1px rgba(93, 130, 158, 0.5);
+    font: normal normal 400 11px/35px 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+    display: inline-block;
+    padding: 0px 10px;
+    float: right;
+    margin: -1px 20px 0px 0;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 1px 1px rgba(93, 130, 158, 0.5);
 }
 
 #authentication span {
-  padding: 4px 10px;
-  display: inline-block;
+    padding: 4px 10px;
+    display: inline-block;
 }
 
 #authentication span.username {
-  padding: 0px;
-  font-weight: 600;
+    padding: 0px;
+    font-weight: 600;
 }
 
 #authentication a:link, #authentication a:visited {
-  color: #428bca;
+    color: #428bca;
 }
 
 header > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #main-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px 0 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0 10px 5px;
 }
 
 #main-nav ul {
-  margin: 0 15px 0 0;
-  padding: 0;
+    margin: 0 15px 0 0;
+    padding: 0;
 }
 
 #main-nav li {
-  list-style-type: none;
-  display: inline-block;
-  font: normal normal 400 14px/18px 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
-  padding: 5px 7px;
+    list-style-type: none;
+    display: inline-block;
+    font: normal normal 400 14px/18px 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+    padding: 5px 7px;
 }
 
 #main-nav li a:link, #main-nav li a:visited {
-  color: #777;
-  padding: 1px;
+    color: #777;
+    padding: 1px;
 }
 
 #main-nav li a:hover {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 #main-nav li.selected a:link, #main-nav li.selected a:visited {
-  color: #000;
-  border-bottom: 1px solid #ddd;
+    color: #000;
+    border-bottom: 1px solid #ddd;
 }
 
 .welcome {
     padding: 3px;
     /*height: 200px;*/
     min-height: 200px;
+    display: none;
 }
 
 #right_side {
-  margin: 5px 20px 0 10px;
-  padding: 5px 15px;
-  background: #F1F6FE url(../images/side_bg.gif) bottom left repeat-x;
-  text-align: left;
-  font-size: 80%;
-  width: 315px;
+    margin: 5px 20px 0 10px;
+    padding: 5px 15px;
+    background: #F1F6FE url(../images/side_bg.gif) bottom left repeat-x;
+    text-align: left;
+    font-size: 80%;
+    width: 315px;
 }
 
 #right_side .sidebar-box {
-  padding: 0 0 15px 0;
+    padding: 0 0 15px 0;
 }
 
 #right_side ul {
-  padding: 0px 15px;
-  margin: 15px 0px;
-  list-style-type: disc;
+    padding: 0px 15px;
+    margin: 15px 0px;
+    list-style-type: disc;
 }
 
 #right_side li {
-  color: #cfd9ea;
-  padding: 2px 0;
-  text-indent: -3px;
+    color: #cfd9ea;
+    padding: 2px 0;
+    text-indent: -3px;
 }
 
 #whats-new form {
-  overflow: auto;
+    overflow: auto;
 }
 
 #whats-new p {
-  color: #cfd9ea;
-  margin-left: -1px;
+    color: #cfd9ea;
+    margin-left: -1px;
 }
 
 #whats-new b {
-  font: normal normal 400 12px/16px 'Verdana',Arial,sans-serif;
-  margin-left: -10px;
+    font: normal normal 400 12px/16px 'Verdana',Arial,sans-serif;
+    margin-left: -10px;
 }
 
 #whats-new p a {
-  margin-left: 12px;
+    margin-left: 12px;
 }
 
 #whats-new input[type="text"] {
-  box-sizing: border-box;
-  width: 100%;
-  display: inline-block;
-  padding: 0 10px;
-  font-size: 12px;
-  font-weight: 200;
-  border: 1px solid #1974b8;
-  outline: none;
-  float: left;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 2px;
-  margin: 5px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 200;
+    border: 1px solid #1974b8;
+    outline: none;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    margin: 5px 0px;
 }
 
 #whats-new input[type="submit"] {
-  box-sizing: border-box;
-  color: #fff;
-  font-size: 11px;
-  text-transform: uppercase;
-  background: #1974b8;
-  border: 1px solid #1974b8;
-  border-left: 0px;
-  font-weight: 700;
-  display: inline-block;
-  width: 100%;
-  margin: 0 0 5px 0;
-  text-align: center;
-  line-height: 30px;
-  float: right;
-  border-radius: 2px;
-  height: 30px;
-  padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: #1974b8;
+    border: 1px solid #1974b8;
+    border-left: 0px;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    text-align: center;
+    line-height: 30px;
+    float: right;
+    border-radius: 2px;
+    height: 30px;
+    padding: 0;
 }
 
 #whats-new input[type="submit"]:hover {
-  cursor: pointer;
-  background: #2893e2;
+    cursor: pointer;
+    background: #2893e2;
 }
 
 @media screen and (max-width: 1000px) {
-  #authentication {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+    #authentication {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-  #main-nav {
-    padding-top: 0;
-  }
+    #main-nav {
+        padding-top: 0;
+    }
 
-  #header {
-    position: unset;
-  }
+    #header {
+        position: unset;
+    }
 }
 
 /* IE11 specific styling */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-  #right_side input[type="submit"] {
-    line-height: 28px;
-  }
+    #right_side input[type="submit"] {
+        line-height: 28px;
+    }
 }
 
 /* section of right column containing user testimonials,
@@ -1275,8 +1276,8 @@ aka, "what people are saying" */
 
 /* actual quote from user */
 #testimonials blockquote p {
-  font: normal normal 400 13px/18px Verdana, Arial sans-serif;
-  margin: 15px 0px;
+    font: normal normal 400 13px/18px Verdana, Arial sans-serif;
+    margin: 15px 0px;
 }
 
 /* name and institution of user */
@@ -1287,81 +1288,81 @@ cite { font-style: italic; display: block; text-align: left; text-transform: non
 
 
 #login_header {
-  height: 50px;
-  background-color: #1974b8;
-  clear: both;
-  text-align: center;
-  padding-top:12px;
-  /*color: #B6CEF9;*/
-  font-family: verdana, arial, sans-serif;
-  font-size: 11px;
-  line-height: 18px;
-  border-right: 1px solid #ffffff;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #0f3974;
-  border-left:1px solid #0f3974; /*#bbb;*/
-  background: -moz-linear-gradient(top, #c5deea 0%, #8abbd7 16%, #1974B8 100%); /* firefox */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5deea), color-stop(16%,#8abbd7), color-stop(100%,#1974B8)); /* webkit */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#1974B8',GradientType=0 ); /* ie */
+    height: 50px;
+    background-color: #1974b8;
+    clear: both;
+    text-align: center;
+    padding-top:12px;
+    /*color: #B6CEF9;*/
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #0f3974;
+    border-left:1px solid #0f3974; /*#bbb;*/
+    background: -moz-linear-gradient(top, #c5deea 0%, #8abbd7 16%, #1974B8 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5deea), color-stop(16%,#8abbd7), color-stop(100%,#1974B8)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#1974B8',GradientType=0 ); /* ie */
 }
 
 #footer {
-  border-top: 1px solid #f5f5f5;
-  clear: both;
-  text-align: center;
-  padding: 15px 20px;
-  margin: 20px 20px 0 20px;
-  font: normal normal 12px/18px 'Helvetica Neue', Arial, sans-serif;
+    border-top: 1px solid #f5f5f5;
+    clear: both;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 20px 20px 0 20px;
+    font: normal normal 12px/18px 'Helvetica Neue', Arial, sans-serif;
 }
 
 #footer a:link, #footer a:visited, #footer a:active, a:hover {
-  color: #428bca;
-  text-decoration: none;
+    color: #428bca;
+    text-decoration: none;
 }
 
 #right_side h3 {
-  margin: 10px 0;
-  padding: 0;
-  font: normal normal 600 18px/24px 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
-  color: #333;
-  border-bottom: 1px solid #cfd9ea;
+    margin: 10px 0;
+    padding: 0;
+    font: normal normal 600 18px/24px 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+    color: #333;
+    border-bottom: 1px solid #cfd9ea;
 }
 
 #left_side h3{
-  margin-top:5px; margin-bottom:10px; margin-left:2.5px; margin-right:2.5px;
-  padding:0.5px;
-  font-family: verdana, arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: center;
-  line-height: 14px;
-  color: #FFFFFF;
-  border:1px solid #0F3974;
-  background-color: #1974b8;
+    margin-top:5px; margin-bottom:10px; margin-left:2.5px; margin-right:2.5px;
+    padding:0.5px;
+    font-family: verdana, arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    line-height: 14px;
+    color: #FFFFFF;
+    border:1px solid #0F3974;
+    background-color: #1974b8;
 }
 
 #right_side A:link {
-  color: #1974b8;
+    color: #1974b8;
 }
 #right_side A:visited {
-  color: #1974b8;
+    color: #1974b8;
 }
 #right_side A:active {
-  color: #1974b8;
+    color: #1974b8;
 }
 
 #content A:link {
-  COLOR: #1974b8; text-decoration: none;
+    COLOR: #1974b8; text-decoration: none;
 }
 #content A:visited {
-  COLOR: #1974b8; text-decoration: none;
+    COLOR: #1974b8; text-decoration: none;
 }
 #content A:active {
-  COLOR: #1974b8; text-decoration: none;
+    COLOR: #1974b8; text-decoration: none;
 }
 #content A:hover {
-  COLOR: #1974b8; text-decoration: underline;
+    COLOR: #1974b8; text-decoration: underline;
 }
 
 /* The Cytoscape Web container must have its dimensions set. */
@@ -1377,18 +1378,18 @@ table #network_wrapper{
 /*.link { text-decoration: underline; color: #0b94b1; cursor: pointer; } */
 
 .scroll {
-background-color:#FFFFFF;
-width:100%;
-height:215px;
-overflow:auto;
+    background-color:#FFFFFF;
+    width:100%;
+    height:215px;
+    overflow:auto;
 }
 
 .hide_details {
-background-color:#eeeeee;
-border: 1px solid #aaaaaa;
-padding:1px;
-text-decoration:none !important;
-cursor: default;
+    background-color:#eeeeee;
+    border: 1px solid #aaaaaa;
+    padding:1px;
+    text-decoration:none !important;
+    cursor: default;
 }
 
 /*********************************************************************
@@ -1454,15 +1455,15 @@ cursor: default;
 }
 
 .query_step_section:nth-of-type(1) {
-  border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 /* Step Header */
 .step_header {
-  font-size:15px;
-  font-weight:bold;
-  margin-right:5px;
-  color:#2986e2;
+    font-size:15px;
+    font-weight:bold;
+    margin-right:5px;
+    color:#2986e2;
 }
 #jstree_selected_study_count {
     width: 140px;
@@ -1521,10 +1522,10 @@ cursor: default;
 
 /* Genomic Profiles Div */
 #genomic_profiles {
-  padding-top:10px;
-  padding-bottom:5px;
-  font-size: 11px !important;
-  color:black;
+    padding-top:10px;
+    padding-bottom:5px;
+    font-size: 11px !important;
+    color:black;
 }
 
 /*  Genomic Profiles Input Box */
@@ -1547,27 +1548,27 @@ cursor: default;
 
 /* This is the gene_list input text area */
 #gene_list {
-  background-color:#eeeeee;
-  width:75%;
-  font-weight:bold;
-  font-size:15px;
-  font-family: verdana, arial, sans-serif;
+    background-color:#eeeeee;
+    width:75%;
+    font-weight:bold;
+    font-size:15px;
+    font-family: verdana, arial, sans-serif;
 }
 
 /* This refers to a subgroup of profiles that all share the same alteration type,
    e.g. a group of expression profiles. */
 .genomic_profiles_subgroup{
-   margin-left:20px;
-   margin-top:2px;
-   margin-bottom:5px;
-   font-size:90%;
+    margin-left:20px;
+    margin-top:2px;
+    margin-bottom:5px;
+    font-size:90%;
 }
 
 /* Z-score threshold input (hidden until appropriate radio button selected) */
 .score_threshold {
-   display: none;
-   margin-left: 64px;
-   font-size: 90%;
+    display: none;
+    margin-left: 64px;
+    font-size: 90%;
 }
 
 /* Do not allow user to resize the text area */
@@ -1577,18 +1578,18 @@ textarea {
 }
 
 #query_form_on_results_page{
-  background-color:#CCCCFF;
+    background-color:#CCCCFF;
 }
 
 .profile_help {
-vertical-align:middle;
-padding:4px;
+    vertical-align:middle;
+    padding:4px;
 }
 
 .ui-state-error{
-  padding:5px !important;
-  margin-top:10px !important;
-  font-size:125%;
+    padding:5px !important;
+    margin-top:10px !important;
+    font-size:125%;
 }
 
 .percent_altered {
@@ -1596,8 +1597,8 @@ padding:4px;
 }
 
 #netmsg {
-  padding-bottom:10px;
-  padding-left:5px;
+    padding-bottom:10px;
+    padding-left:5px;
 }
 
 h2.cross_cancer_header {
@@ -1607,12 +1608,12 @@ h2.cross_cancer_header {
 }
 
 .section ul {
-  padding-top:10px;
-  font-size:16px !important;
+    padding-top:10px;
+    font-size:16px !important;
 }
 
 .section h4 {
-  padding-bottom:5px;
+    padding-bottom:5px;
 }
 
 .exp_error_box {
@@ -1676,21 +1677,21 @@ cc-ie-message {
 /* Float on alright! */
 #previewContainer {
     /*z-index: 9999999;*/
-  width: 170px;
-  height: 145px;
-  float: right;
-  border: 2px solid #FFFFFF;
-  border-radius: 3px;
-  box-shadow: 0 0 7px #999999;
-  overflow-y: hidden;
-  margin-left: 15px;
+    width: 170px;
+    height: 145px;
+    float: right;
+    border: 2px solid #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 0 7px #999999;
+    overflow-y: hidden;
+    margin-left: 15px;
 }
 
 /* This is a fix to remove the tiny bullet
  * appearing on the preview image slider
  */
 #previewContainer li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 /* right menu d3 map */
@@ -1730,7 +1731,7 @@ ul.ui-autocomplete li.ui-menu-item { font-size: 0.6em; text-align: left; }
 /* this is required because of
   .section ul css settings*/
 .chzn-results li {
-  font-size: 12px !important;
+    font-size: 12px !important;
 }
 
 .brush .extent {
@@ -1745,12 +1746,12 @@ ul.ui-autocomplete li.ui-menu-item { font-size: 0.6em; text-align: left; }
 }
 
 .fa-lg {
-   line-height: inherit !important;
-   vertical-align: top !important;
+    line-height: inherit !important;
+    vertical-align: top !important;
 }
 .fa-md {
-   line-height: inherit !important;
-   vertical-align: top !important;
+    line-height: inherit !important;
+    vertical-align: top !important;
 }
 .mutationsProteinChangeWarning {
     opacity: 0.1;

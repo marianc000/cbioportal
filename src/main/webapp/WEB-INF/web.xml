@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
     <!-- general settings -->
 
     <session-config>
-      <session-timeout>720</session-timeout>
+        <session-timeout>720</session-timeout>
     </session-config>
     <mime-mapping>
         <extension>wsdl</extension>
@@ -17,6 +17,7 @@
         <welcome-file>index.do</welcome-file>
     </welcome-file-list>
     <display-name>Cancer Genomics Portal</display-name>
+
 
     <!-- context configuration -->
     <!-- jndi profile is defined here to prevent exceptions during war deployment -->
@@ -28,7 +29,7 @@
         <param-name>spring.liveBeansView.mbeanDomain</param-name>  
         <param-value>${dbconnector:jndi},${authenticate}</param-value>
     </context-param> 
-
+    <!-- Location of the XML file that defines the root application context.  Applied by ContextLoaderListener. -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext-security.xml classpath:applicationContext-business.xml classpath:applicationContext-core.xml</param-value>
@@ -40,11 +41,12 @@
     </context-param>
 
     <context-param>
-      <param-name>log4jConfigLocation</param-name>
-      <param-value>classpath:log4j.properties</param-value>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
     </context-param> 
 
     <!-- listeners -->
+    <!--spring loader loading applicationContext-security.xml-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -56,43 +58,43 @@
     </listener>
     <!-- custom location for log4j config -->
     <listener>
-      <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
 
     <!-- filters -->
     <filter>
-      <filter-name>CorsFilter</filter-name>
-      <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
     </filter>
 
     <filter-mapping>
-      <filter-name>CorsFilter</filter-name>
-      <url-pattern>/*</url-pattern>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 
     <filter>
-      <filter-name>APICorsFilter</filter-name>
-      <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
-      <init-param>
-        <param-name>cors.allowed.origins</param-name>
-        <!-- limit to portal server -->
-        <param-value>${session.service.origin}</param-value>
-      </init-param>
+        <filter-name>APICorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <init-param>
+            <param-name>cors.allowed.origins</param-name>
+            <!-- limit to portal server -->
+            <param-value>${session.service.origin}</param-value>
+        </init-param>
     </filter>
 
     <filter-mapping>
-      <filter-name>APICorsFilter</filter-name>
-      <url-pattern>/api-legacy/proxy/session-service/*</url-pattern>
+        <filter-name>APICorsFilter</filter-name>
+        <url-pattern>/api-legacy/proxy/session-service/*</url-pattern>
     </filter-mapping>
-
+    <!--spring sequrity-->
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
 
     <filter-mapping>
-      <filter-name>springSecurityFilterChain</filter-name>
-      <url-pattern>/*</url-pattern>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 
     <filter>
@@ -138,7 +140,7 @@
     </filter-mapping>
 
     <!-- make sure XssFilter runs last, so that any new parameters added
-         (for example in SessionServiceFilter) are also cleaned -->
+    (for example in SessionServiceFilter) are also cleaned -->
     <filter>
         <filter-name>XssFilter</filter-name>
         <display-name>Xss Filter</display-name>
@@ -241,14 +243,14 @@
         <url-pattern>/portal_meta_data.json</url-pattern>
     </servlet-mapping>
 
-	<servlet>
-		<servlet-name>portal_meta_data</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.PortalMetaData</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>portal_meta_data</servlet-name>
-		<url-pattern>/portalMetadata.json</url-pattern>
-	</servlet-mapping>
+    <servlet>
+        <servlet-name>portal_meta_data</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.PortalMetaData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>portal_meta_data</servlet-name>
+        <url-pattern>/portalMetadata.json</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>network</servlet-name>
@@ -259,19 +261,19 @@
         <url-pattern>/network.do</url-pattern>
     </servlet-mapping>
 
-	<servlet>
-		<servlet-name>network_sbgn</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.NetworkSbgnServlet</servlet-class>
-	</servlet>
+    <servlet>
+        <servlet-name>network_sbgn</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.NetworkSbgnServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>network_sbgn</servlet-name>
         <url-pattern>/networkSbgn.do</url-pattern>
     </servlet-mapping>
 
-	<servlet>
-		<servlet-name>bioGeneQuery</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.BioGeneServlet</servlet-class>
-	</servlet>
+    <servlet>
+        <servlet-name>bioGeneQuery</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.BioGeneServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>bioGeneQuery</servlet-name>
         <url-pattern>/bioGeneQuery.do</url-pattern>
@@ -287,7 +289,7 @@
     </servlet-mapping>
 
     <servlet>
-    	<servlet-name>CheckGeneSymbolJSON</servlet-name>
+        <servlet-name>CheckGeneSymbolJSON</servlet-name>
         <servlet-class>org.mskcc.cbio.portal.servlet.CheckGeneSymbolJSON</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -296,7 +298,7 @@
     </servlet-mapping>
     
     <servlet>
-    	<servlet-name>ClinicalFreeFormJSON</servlet-name>
+        <servlet-name>ClinicalFreeFormJSON</servlet-name>
         <servlet-class>org.mskcc.cbio.portal.servlet.ClinicalFreeFormJSON</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -313,37 +315,37 @@
         <url-pattern>/omaRedirect.do</url-pattern>
     </servlet-mapping>
 
-	<servlet>
-		<servlet-name>pfam_sequence_json</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.PfamSequenceServlet</servlet-class>
-	</servlet>
+    <servlet>
+        <servlet-name>pfam_sequence_json</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.PfamSequenceServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>pfam_sequence_json</servlet-name>
         <url-pattern>/getPfamSequence.json</url-pattern>
     </servlet-mapping>
 
-	<servlet>
-		<servlet-name>mutation_aligner_json</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.MutationAlignerServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>mutation_aligner_json</servlet-name>
-		<url-pattern>/getMutationAligner.json</url-pattern>
-	</servlet-mapping>
+    <servlet>
+        <servlet-name>mutation_aligner_json</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.MutationAlignerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mutation_aligner_json</servlet-name>
+        <url-pattern>/getMutationAligner.json</url-pattern>
+    </servlet-mapping>
 
-	<servlet>
-		<servlet-name>mutation_3d_json</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.PdbDataServlet</servlet-class>
-	</servlet>
+    <servlet>
+        <servlet-name>mutation_3d_json</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.PdbDataServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mutation_3d_json</servlet-name>
         <url-pattern>/get3dPdb.json</url-pattern>
     </servlet-mapping>
 
-	<servlet>
-		<servlet-name>mutation_data_json</servlet-name>
-		<servlet-class>org.mskcc.cbio.portal.servlet.MutationDataServlet</servlet-class>
-	</servlet>
+    <servlet>
+        <servlet-name>mutation_data_json</servlet-name>
+        <servlet-class>org.mskcc.cbio.portal.servlet.MutationDataServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mutation_data_json</servlet-name>
         <url-pattern>/getMutationData.json</url-pattern>
@@ -356,7 +358,7 @@
     <servlet-mapping>
         <servlet-name>oncoprint_converter</servlet-name>
         <url-pattern>/oncoprint_converter.svg</url-pattern>
-     </servlet-mapping>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>MutSigJSON</servlet-name>

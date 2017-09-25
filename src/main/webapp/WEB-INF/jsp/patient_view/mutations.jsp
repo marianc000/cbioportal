@@ -237,7 +237,7 @@
                     },
                     {// chr
                         "aTargets": [ mutTableIndices["chr"] ],
-                        "bVisible": false,
+                      //  "bVisible": false,
                         "sClass": "right-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -251,7 +251,7 @@
                     },
                     {// start
                         "aTargets": [ mutTableIndices["start"] ],
-                        "bVisible": false,
+                      //  "bVisible": false,
                         "sClass": "right-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -266,7 +266,7 @@
                     },
                     {// end
                         "aTargets": [ mutTableIndices["end"] ],
-                        "bVisible": false,
+                      //  "bVisible": false,
                         "sClass": "right-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -281,7 +281,7 @@
                     },
                     {// ref
                         "aTargets": [ mutTableIndices["ref"] ],
-                        "bVisible": false,
+                     //   "bVisible": false,
                         "sClass": "center-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -295,7 +295,7 @@
                     },
                     {// var
                         "aTargets": [ mutTableIndices["_var"] ],
-                        "bVisible": false,
+                     //   "bVisible": false,
                         "sClass": "center-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -308,7 +308,7 @@
                         }
                     },
                     {// validation
-                        "bVisible": false,
+                     //   "bVisible": false,
                         "aTargets": [ mutTableIndices["validation"] ],
                         "sClass": "no-wrap-td",
                         "mDataProp": function(source,type,value) {
@@ -316,6 +316,19 @@
                                 return;
                             } else {
                                 var val = mutations.getValue(source[0],'validation');
+                                return val ? val : "";
+                            }
+                        }
+                    },
+                                        {// test
+                     //   "bVisible": false,
+                        "aTargets": [ mutTableIndices["mytest"] ],
+                        "sClass": "no-wrap-td",
+                        "mDataProp": function(source,type,value) {
+                            if (type==='set') {
+                                return;
+                            } else {
+                                var val = mutations.getValue(source[0],"mytest");
                                 return val ? val : "";
                             }
                         }
@@ -415,7 +428,7 @@
                     },
                     {// tumor read count frequency
                         "aTargets": [ mutTableIndices["tumor_var_reads"] ],
-                        "bVisible": false,
+                     //   "bVisible": false,
                         "sClass": "right-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -443,7 +456,7 @@
                     },
                     {// tumor read count frequency
                         "aTargets": [ mutTableIndices["tumor_ref_reads"] ],
-                        "bVisible": false,
+                     //   "bVisible": false,
                         "sClass": "right-align-td",
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
@@ -769,7 +782,7 @@
                     {
                         "aTargets": [ mutTableIndices["ma"] ],
                         "sClass": "center-align-td",
-                        "bVisible": false,
+                       // "bVisible": false,
                         "mDataProp": function(source,type,value) {
                             if (type==='set') {
                                 return;

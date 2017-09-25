@@ -80,7 +80,7 @@
 </div>
 &nbsp;&nbsp;&nbsp;-->
 <!--<a id="select_cancer_type_help" title="Type in keywords to narrow down the studies. When using two or more search terms, only studies with all terms are returned (AND logic). Add an 'or' between search terms if you want to see studies that contain either term. Placing quotation marks around two or more words will look for the exact string. Placing a dash (-) before a term will exclude results with that term."><i>More examples</i></a>-->
-<div id="jstree" style="max-height:250px; overflow-y: scroll"></div>
+<div id="jstree"></div>
 <br>
 <!--<div class="row step_header_bottom_line">
     <div class="btn btn-default btn-sm">

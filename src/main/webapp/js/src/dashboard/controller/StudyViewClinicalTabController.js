@@ -39,113 +39,118 @@
  */
 
 
-var StudyViewClinicalTabController = (function() {
+var StudyViewClinicalTabController = (function () {
     function init(callback) {
         $.when(
-            window.iviz.datamanager.getClinicalAttributesByStudy(),
-            window.iviz.datamanager.getPatientClinicalData(),
-            window.iviz.datamanager.getSampleClinicalData(),
-            window.iviz.datamanager.getStudyToSampleToPatientdMap())
-            .then(function(ca, pd, sd, map) {
-                var attr = _.extend(ca);
-                var arr = _.extend(pd, sd);
-                var data = [];
-                var mapping =
-                    iviz.datamanager
-                        .initialSetupResult
-                        .groups.group_mapping.patient.sample;
+                window.iviz.datamanager.getClinicalAttributesByStudy(),
+                window.iviz.datamanager.getPatientClinicalData(),
+                window.iviz.datamanager.getSampleClinicalData(),
+                window.iviz.datamanager.getStudyToSampleToPatientdMap())
+                .then(function (ca, pd, sd, map) {
+                    var attr = _.extend(ca);
+                    var arr = _.extend(pd, sd);
+                    var data = [];
+                    var mapping =
+                            iviz.datamanager
+                            .initialSetupResult
+                            .groups.group_mapping.patient.sample;
 
-                attr['CASE_ID'] = {
-                    attr_id: 'CASE_ID',
-                    datatype: 'STRING',
-                    description: 'Sample ID',
-                    display_name: 'Sample ID'
-                };
+                    attr['CASE_ID'] = {
+                        attr_id: 'CASE_ID',
+                        datatype: 'STRING',
+                        description: 'Sample ID',
+                        display_name: 'Sample ID'
+                    };
 
-                attr['PATIENT_ID'] = {
-                    attr_id: 'PATIENT_ID',
-                    datatype: 'STRING',
-                    description: 'Patient ID',
-                    display_name: 'Patient ID'
-                };
+                    attr['PATIENT_ID'] = {
+                        attr_id: 'PATIENT_ID',
+                        datatype: 'STRING',
+                        description: 'Patient ID',
+                        display_name: 'Patient ID'
+                    };
 
-                attr.study_id = {
-                    datatype: 'STRING',
-                    description: '',
-                    display_name: 'Cancer Studies',
-                    attr_id: 'study_id'
-                };
+                    attr.study_id = {
+                        datatype: 'STRING',
+                        description: '',
+                        display_name: 'Cancer Studies',
+                        attr_id: 'study_id'
+                    };
 
-                _.each(arr, function(datum) {
-                    _.each(datum, function(item) {
-                        if (item.attr_id !== 'CASE_ID') {
-                            if (item.hasOwnProperty('patient_id')) {
-                                if (_.isArray(mapping[item.patient_id])) {
-                                    _.each(mapping[item.patient_id],
-                                        function(sample_id) {
-                                            data.push({
-                                                attr_id: item.attr_id,
-                                                attr_val: item.attr_val,
-                                                CASE_ID: sample_id
-                                            });
-                                        })
+                    _.each(arr, function (datum) {
+                        _.each(datum, function (item) {
+                            if (item.attr_id !== 'CASE_ID') {
+                                if (item.hasOwnProperty('patient_id')) {
+                                    if (_.isArray(mapping[item.patient_id])) {
+                                        _.each(mapping[item.patient_id],
+                                                function (sample_id) {
+                                                    data.push({
+                                                        attr_id: item.attr_id,
+                                                        attr_val: item.attr_val,
+                                                        CASE_ID: sample_id
+                                                    });
+                                                })
+                                    }
+                                } else {
+                                    data.push({
+                                        attr_id: item.attr_id,
+                                        attr_val: item.attr_val,
+                                        CASE_ID: item.sample_id
+                                    });
                                 }
-                            } else {
+                            }
+                        });
+                    });
+                    console.log("data:");
+                    console.log(data);
+
+                    _.each(mapping, function (sampleMap, patientId) {
+                        if (patientId !== 'Composite.Element.Ref') {
+                            _.each(sampleMap, function (sampleId) {
                                 data.push({
-                                    attr_id: item.attr_id,
-                                    attr_val: item.attr_val,
-                                    CASE_ID: item.sample_id
+                                    attr_id: 'PATIENT_ID',
+                                    attr_val: patientId,
+                                    CASE_ID: sampleId
+                                });
+                            });
+                        }
+                    });
+
+                    _.each(map, function (samples, studyId) {
+                        _.each(Object.keys(samples), function (sampleId) {
+                            if (sampleId !== 'Composite.Element.Ref') {
+                                data.push({
+                                    attr_id: 'study_id',
+                                    attr_val: studyId,
+                                    CASE_ID: sampleId
                                 });
                             }
-                        }
-                    });
-                });
-
-                _.each(mapping, function(sampleMap, patientId) {
-                    if (patientId !== 'Composite.Element.Ref') {
-                        _.each(sampleMap, function(sampleId) {
-                            data.push({
-                                attr_id: 'PATIENT_ID',
-                                attr_val: patientId,
-                                CASE_ID: sampleId
-                            });
                         });
-                    }
-                });
+                    });
 
-                _.each(map, function(samples, studyId) {
-                    _.each(Object.keys(samples), function(sampleId) {
-                        if (sampleId !== 'Composite.Element.Ref') {
-                            data.push({
-                                attr_id: 'study_id',
-                                attr_val: studyId,
-                                CASE_ID: sampleId
-                            });
+                    _.each(attr, function (item) {
+                        if (item.attr_id === 'CASE_ID' ||
+                                item.attr_id === 'PATIENT_ID') {
+                            item.fixed = true;
+                            if (StudyViewParams.params.studyId === 'mskimpact') {
+                                if (item.attr_id === 'CASE_ID') {
+                                    item.column_width = 200;
+                                }
+                                if (item.attr_id === 'PATIENT_ID') {
+                                    item.column_width = 160;
+                                }
+                            }
                         }
                     });
-                });
+                    console.log("data:");
+                    console.log(data);
+                    console.log("attr:");
+                    console.log(attr);
+                    initTable(_.values(attr), data);
 
-                _.each(attr, function(item) {
-                    if (item.attr_id === 'CASE_ID' ||
-                        item.attr_id === 'PATIENT_ID') {
-                        item.fixed = true;
-                        if (StudyViewParams.params.studyId === 'mskimpact') {
-                            if (item.attr_id === 'CASE_ID') {
-                                item.column_width = 200;
-                            }
-                            if (item.attr_id === 'PATIENT_ID') {
-                                item.column_width = 160;
-                            }
-                        }
+                    if (_.isFunction(callback)) {
+                        callback();
                     }
-                });
-
-                initTable(_.values(attr), data);
-
-                if (_.isFunction(callback)) {
-                    callback();
-                }
-            })
+                })
     }
 
     function initTable(attr, arr) {
@@ -157,7 +162,7 @@ var StudyViewClinicalTabController = (function() {
             filter: "ALL",
             download: "ALL",
             downloadFileName: StudyViewParams.params.studyId +
-            '_clinical_data.tsv',
+                    '_clinical_data.tsv',
             showHide: true,
             hideFilter: true,
             scroller: true,
@@ -177,7 +182,7 @@ var StudyViewClinicalTabController = (function() {
         });
 
         ReactDOM.render(table,
-            document.getElementById('clinical-data-table-div'));
+                document.getElementById('clinical-data-table-div'));
     }
 
     return {
